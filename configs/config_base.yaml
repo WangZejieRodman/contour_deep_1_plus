@@ -5,7 +5,7 @@
 
 # 项目基本信息
 project:
-  name: "contour_deep_1"
+  name: "contour_deep_1+"
   version: "1.0.0"
   description: "Deep learning-based place recognition using multi-layer BEV representation"
 
@@ -115,7 +115,7 @@ preprocessing:
   enable_cache: true
 
   # 缓存目录
-  cache_dir: "/home/wzj/pan1/contour_deep_1/data/Chilean_BEV_Cache"
+  cache_dir: "/home/wzj/pan1/contour_deep_1+/data/Chilean_BEV_Cache"
   train_cache_subdir: "train"
   test_cache_subdir: "test"
 
