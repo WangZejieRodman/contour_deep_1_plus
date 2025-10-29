@@ -21,24 +21,24 @@ pip install -r requirements.txt
 ### 2. 数据预处理
 ```bash
 # 生成训练/验证集BEV缓存
-python scripts/preprocess_bev.py --split all
+python scripts/preprocess_bev_adaptive.py --split all
 
 # 生成评估集BEV缓存（跨时间段）
-python scripts/preprocess_bev_evaluation.py --split all
+python scripts/preprocess_bev_evaluation_adaptive.py --split all
 ```
 
 ### 3. 训练
 ```bash
-python scripts/run_training_day8.py
+python scripts/run_training_adaptive.py
 ```
 
 ### 4. 评估
 ```bash
 # 训练集自查询（模型正确性检查）
-python scripts/analyze_and_eval_self_day9.py
+python scripts/analyze_and_eval_self_adaptive.py
 
 # 跨时间段评估（真实性能）
-python scripts/analyze_and_eval_day9.py
+python scripts/analyze_and_eval_adaptive.py
 ```
 
 ## 📊 核心创新
@@ -74,14 +74,6 @@ contour_deep_1/
 
 - `config_base.yaml`: BEV生成、数据集、硬件配置
 - `config_retrieval.yaml`: 模型、优化器、训练超参数
-
-关键参数：
-- BEV分辨率: 0.2m/pixel
-- 层数: 8层（0-5m，间距0.625m）
-- 网格尺寸: 200×200
-- 特征维度: 128
-- Batch size: 4
-- Learning rate: 1e-4
 
 ## 📈 监控训练
 
