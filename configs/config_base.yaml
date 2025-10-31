@@ -99,7 +99,7 @@ augmentation:
 
   # 平移增强
   translation:
-    enabled: true
+    enabled: false
     range: [-5.0, 5.0]
     probability: 0.5
 
